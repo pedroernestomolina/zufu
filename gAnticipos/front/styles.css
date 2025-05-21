@@ -1,0 +1,250 @@
+/* styles.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  width: 250px;
+  background: linear-gradient(180deg, #2a2a3d 0%, #1e1e2f 100%);
+  padding-top: 30px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.hidden {
+  transform: translateX(-250px);
+}
+
+.sidebar h3 {
+  color: #ff7043;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sidebar .nav-link {
+  color: #b0b0c0;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  color: #ff7043;
+  background-color: rgba(255, 112, 67, 0.1);
+  border-left: 4px solid #ff7043;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 30px;
+  transition: margin-left 0.3s ease;
+}
+
+.content.full {
+  margin-left: 0;
+}
+
+.section {
+  display: none;
+  background-color: #2a2a3d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section.active {
+  display: block;
+}
+
+.form-control,
+.form-select {
+  background-color: #3b3b4f;
+  border: none;
+  color: #ffffff;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #3b3b4f;
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 112, 67, 0.5);
+}
+
+.btn-primary {
+  background-color: #ff7043;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e65c33;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: #5a5a7a;
+}
+
+.btn-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #ff7043;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  z-index: 1100;
+  display: none;
+}
+
+.alert {
+  border-radius: 8px;
+}
+
+/* Estilos para la tabla */
+.table {
+  background-color: #3b3b4f;
+  color: #ffffff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #2a2a3d;
+}
+
+.table th,
+.table td {
+  border-color: #5a5a7a;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: #000;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+/* Modal */
+.modal-content {
+  background-color: #fff;
+  color: #000;
+}
+
+.modal-header,
+.modal-footer {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.modal-title {
+  color: #000;
+}
+
+/* Estilo para el modal de asignación y visualización */
+#asignarModal .modal-body,
+#visualizarAsignacionesModal .modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+#asignacionesTable,
+#asignacionesDetailsTable {
+  font-size: 0.9em;
+}
+
+/* Alineación de columnas específicas */
+.monto-recibido {
+  text-align: right;
+}
+
+.numero-referencia {
+  text-align: center;
+}
+
+.numero-referencia-mov-comprometido {
+  text-align: right;
+}
+
+
+.medio-pago {
+  text-align: center;
+}
+
+/* Estilos para la búsqueda de clientes */
+#clienteSearch {
+  background-color: #3b3b4f;
+  color: #ffffff;
+}
+
+#clienteSearch:focus {
+  box-shadow: 0 0 5px rgba(255, 112, 67, 0.5);
+}
+
+#clienteSelect {
+  background-color: #3b3b4f;
+  color: #ffffff;
+}
+
+#clienteSelect:focus {
+  box-shadow: 0 0 5px rgba(255, 112, 67, 0.5);
+}
+
+/* Estilo para el total de movimientos */
+#totalMovimientos {
+    font-size: 1.1em;
+    color: #ff7043;
+    font-weight: 600;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .sidebar {
+      transform: translateX(-250px);
+  }
+  .sidebar.visible {
+      transform: translateX(0);
+  }
+  .content {
+      margin-left: 0;
+  }
+  .content.full {
+      margin-left: 0;
+  }
+  .btn-toggle {
+      display: block;
+  }
+  .section {
+      padding: 15px;
+  }
+  .col-md-6 {
+      width: 100%;
+  }
+}
