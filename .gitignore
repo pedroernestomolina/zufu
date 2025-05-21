@@ -1,0 +1,25 @@
+# Archivos de compilación y dependencias
+/gAnticipos/api/TransfAPI/bin/
+/gAnticipos/api/TransfAPI/obj/
+*.dll
+*.pdb
+*.deps.json
+*.runtimeconfig.json
+*.cache
+
+# Configuraciones sensibles
+/gAnticipos/api/TransfAPI/appsettings.Development.json
+/gAnticipos/api/TransfAPI/appsettings.json
+
+# Archivos generados por el IDE
+*.sln
+*.csproj
+*.user
+*.suo
+*.http
+
+# Directorios de runtime específicos
+/gAnticipos/api/TransfAPI/runtimes/
+
+# Archivos de Visual Studio
+.vs/
